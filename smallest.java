@@ -1,19 +1,24 @@
-package ARRAY.inputoutput;
-
-public class smallest
-{
-    public static void main(String[] args) {
-            int[] arr = {10, 25, 7, 89, 45};
-
-            int smallest = arr[0];
-
-            for (int i = 1; i < arr.length; i++) {
-                if (arr[i] < smallest) {
-                    smallest = arr[i];
-                }
-            }
-
-            System.out.println("Smallest Element: " + smallest);
+package METHODS;
+import java.util.*;
+public class smallest {
+    public static int Smallestnumber(int a,int b, int c){
+        if(a<b){
+            return a;
+        } else if (b<c) {
+            return b;
+        }else{
+            return c;
         }
     }
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter first number");
+        int num = sc.nextInt();
+        System.out.println("Enter second number");
+        int num1 = sc.nextInt();
+        System.out.println("Enter third number");
+        int num2 = sc.nextInt();
 
+        System.out.println("The Smallest Number is:-"+Smallestnumber(num,num1,num2));
+    }
+}
