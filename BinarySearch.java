@@ -1,23 +1,44 @@
+package ARRAY.inputoutput;
+
 public class BinarySearch {
-    public static void main(String[] args) {
-        int[] arr = {10, 20, 30, 40, 50};
-        int key = 40;
+        public static int binarySearch(int[] arr, int target) {
 
-        int low = 0, high = arr.length - 1;
+            int low = 0;
+            int high = arr.length - 1;
 
-        while (low <= high) {
-            int mid = (low + high) / 2;
+            while (low <= high) {
 
-            if (arr[mid] == key) {
-                System.out.println("Found at index: " + mid);
-                return;
-            } else if (arr[mid] < key) {
-                low = mid + 1;
-            } else {
-                high = mid - 1;
+                int mid = low + (high - low) / 2;
+
+                if (arr[mid] == target) {
+                    return mid;
+                }
+
+                else if (arr[mid] < target) {
+                    low = mid + 1;
+                }
+
+                else {
+                    high = mid - 1;
+                }
             }
+
+            return -1;
         }
 
-        System.out.println("Element not found");
+        public static void main(String[] args) {
+
+            int[] arr = {2, 4, 6, 8, 10, 12, 14, 16};
+
+            int target = 14;
+
+            int ans = binarySearch(arr, target);
+
+            if (ans == -1) {
+                System.out.println("Target Not Found");
+            } else {
+                System.out.println("Target Found at Index: " + ans);
+            }
+        }
     }
-}
+
