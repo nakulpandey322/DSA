@@ -13,6 +13,7 @@ public class Backtrack {
                 return false;
             }
         }
+        
         //Grid
         int sr =(row/3)*3;
         int sc =(col/3)*3;
