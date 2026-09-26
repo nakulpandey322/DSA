@@ -1,3 +1,4 @@
+
 public class Backtrack {
     public static boolean isSafe(int Sudoku[][],int row,int col,int digit){
         //column
