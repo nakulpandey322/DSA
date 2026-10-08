@@ -1,9 +1,6 @@
 package Greedy;
-
 import java.util.*;
-
 public class JobSequence {
-
     static class Job {
         int deadline;
         int profit;
