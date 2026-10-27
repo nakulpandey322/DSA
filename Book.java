@@ -1,19 +1,16 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-
 class Book {
     int id;
     String title;
     String author;
     boolean issued;
-
     Book(int id, String title, String author) {
         this.id = id;
         this.title = title;
         this.author = author;
         this.issued = false;
     }
-
     void displayBook() {
         System.out.println("ID: " + id);
         System.out.println("Title: " + title);
@@ -22,12 +19,9 @@ class Book {
         System.out.println("----------------------------");
     }
 }
-
 public class LibraryManagementSystem {
-
     static ArrayList<Book> books = new ArrayList<>();
     static Scanner sc = new Scanner(System.in);
-
     static void addBook() {
         System.out.print("Enter Book ID: ");
         int id = sc.nextInt();
