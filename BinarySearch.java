@@ -1,4 +1,3 @@
-
 package ARRAY.inputoutput;
 
 public class BinarySearch {
