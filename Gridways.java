@@ -1,5 +1,4 @@
 public class GridWays {
-
     public static long uniquePaths(int m, int n) {
 
         int totalMoves = m + n - 2;
